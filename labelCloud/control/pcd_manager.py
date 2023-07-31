@@ -73,6 +73,7 @@ class PointCloudManger(object):
                 f"Found {len(self.pcds)} point clouds in the point cloud folder."
             )
             self.update_pcd_infos()
+            self.add_pcds_to_dropdown()
         else:
             self.view.show_no_pointcloud_dialog(
                 self.pcd_folder, PointCloudManger.PCD_EXTENSIONS
@@ -306,3 +307,9 @@ class PointCloudManger(object):
         else:
             self.view.button_next_pcd.setEnabled(True)
             self.view.button_prev_pcd.setEnabled(True)
+    
+    def add_pcds_to_dropdown(self) -> None:
+        for pcd in self.pcds:
+            name = pcd.parts[-1] # get name of file
+            self.view.point_cloud_dropdown.addItem(name)
+

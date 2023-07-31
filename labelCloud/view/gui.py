@@ -111,6 +111,18 @@ STYLESHEET = """
     QComboBox#current_class_dropdown{{
         selection-background-color: #0000FF;
     }}
+
+    QComboBox#point_cloud_dropdown::item:checked{{
+        color: gray;
+    }}
+
+    QComboBox#point_cloud_dropdown::item:selected {{
+        color: #FFFFFF;
+    }}
+
+    QComboBox#point_cloud_dropdown{{
+        selection-background-color: #0000FF;
+    }}
 """
 
 
@@ -172,6 +184,9 @@ class GUI(QtWidgets.QMainWindow):
         self.button_next_pcd: QtWidgets.QPushButton
         self.button_set_pcd: QtWidgets.QPushButton
         self.progressbar_pcds: QtWidgets.QProgressBar
+
+        # drop down
+        self.point_cloud_dropdown: QtWidgets.QComboBox
 
         # bbox control section
         self.button_bbox_up: QtWidgets.QPushButton
