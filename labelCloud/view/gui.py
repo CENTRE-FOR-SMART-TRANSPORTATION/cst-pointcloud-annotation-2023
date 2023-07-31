@@ -324,6 +324,9 @@ class GUI(QtWidgets.QMainWindow):
         )
 
         # LABELING CONTROL
+        self.point_cloud_dropdown.currentTextChanged.connect(
+            self.controller.custom_pcd_from_name
+        )
         self.current_class_dropdown.currentTextChanged.connect(
             self.controller.bbox_controller.set_classname
         )

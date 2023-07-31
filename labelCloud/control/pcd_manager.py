@@ -124,6 +124,15 @@ class PointCloudManger(object):
             self.update_pcd_infos()
         else:
             logging.warning("This point cloud does not exists!")
+    
+    def get_pcd_from_filename(self, name: str) -> None:
+        logging.info(f"Loading {name}...")
+        for i, pcd in enumerate(self.pcds):
+            if name == pcd.parts[-1]:
+                self.get_custom_pcd(i)
+                return
+        logging.warning("This point cloud does not exist!")
+
 
     def get_prev_pcd(self) -> None:
         logging.info("Loading previous point cloud...")

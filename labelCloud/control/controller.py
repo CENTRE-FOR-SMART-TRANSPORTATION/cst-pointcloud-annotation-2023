@@ -92,6 +92,13 @@ class Controller:
         self.pcd_manager.get_custom_pcd(custom)
         self.reset()
         self.bbox_controller.set_bboxes(self.pcd_manager.get_labels_from_file())
+    
+    def custom_pcd_from_name(self, custom: str) -> None:
+        self.save()
+        self.pcd_manager.get_pcd_from_filename(custom)
+        self.reset()
+        self.bbox_controller.set_bboxes(self.pcd_manager.get_labels_from_file())
+        self.bbox_controller.set_active_bbox(0)
 
     # CONTROL METHODS
     def save(self) -> None:
