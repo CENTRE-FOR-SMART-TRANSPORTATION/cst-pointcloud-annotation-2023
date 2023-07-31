@@ -36,7 +36,7 @@ def get_label_strategy(export_format: str, label_folder: Path) -> "BaseLabelForm
 
 
 class LabelManager(object):
-    STD_LABEL_FORMAT = LabelConfig().format
+    STD_LABEL_FORMAT = LabelConfig().format # centroid_abs by default I think
     EXPORT_PRECISION = config.getint("LABEL", "export_precision")
 
     def __init__(
@@ -50,6 +50,7 @@ class LabelManager(object):
         if not self.label_folder.is_dir():
             self.label_folder.mkdir(parents=True)
 
+        # decides how to add labels based on label format
         self.label_strategy = get_label_strategy(strategy, self.label_folder)
 
     def import_labels(self, pcd_path: Path) -> List[BBox]:
