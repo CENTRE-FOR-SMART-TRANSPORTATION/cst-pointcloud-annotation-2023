@@ -209,6 +209,25 @@
        </widget>
       </item>
       <item>
+       <widget class="QLabel" name="point_cloud_dropdown_label">
+        <property name="statusTip">
+         <string>Select a point cloud to display</string>
+        </property>
+        <property name="whatsThis">
+         <string>label for the point cloud drop down box</string>
+        </property>
+        <property name="text">
+         <string>Point Cloud</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="point_cloud_dropdown"/>
+      </item>
+      <item>
        <widget class="QGroupBox" name="bbox_controls">
         <property name="font">
          <font>
@@ -893,16 +912,16 @@
            </property>
           </widget>
          </item>
-          <item>
-              <widget class="QComboBox" name="current_class_dropdown">
-                  <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                      </sizepolicy>
-                  </property>
-              </widget>
-          </item>
+         <item>
+          <widget class="QComboBox" name="current_class_dropdown">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QLabel" name="current_bbox_title">
            <property name="sizePolicy">
@@ -1434,29 +1453,29 @@
          </widget>
         </item>
         <item>
-        <widget class="QPushButton" name="button_assign_label">
+         <widget class="QPushButton" name="button_assign_label">
           <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
-          </sizepolicy>
+           </sizepolicy>
           </property>
           <property name="toolTip">
-          <string>Assign labels to points inside a box</string>
+           <string>Assign labels to points inside a box</string>
           </property>
           <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
+           <enum>Qt::LeftToRight</enum>
           </property>
           <property name="styleSheet">
-          <string notr="true"/>
+           <string notr="true"/>
           </property>
           <property name="text">
-          <string>Assign</string>
+           <string>Assign</string>
           </property>
           <property name="flat">
-          <bool>false</bool>
+           <bool>false</bool>
           </property>
-        </widget>
+         </widget>
         </item>
        </layout>
       </item>
@@ -1536,7 +1555,7 @@
      <x>0</x>
      <y>0</y>
      <width>1278</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
