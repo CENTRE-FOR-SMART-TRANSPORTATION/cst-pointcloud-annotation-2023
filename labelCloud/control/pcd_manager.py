@@ -24,7 +24,7 @@ if TYPE_CHECKING:
 
 
 class PointCloudManger(object):
-    PCD_EXTENSIONS = BasePointCloudHandler.get_supported_extensions()
+    PCD_EXTENSIONS = BasePointCloudHandler.get_supported_extensions() # valid extensions for point clouds
     ORIGINALS_FOLDER = "original_pointclouds"
     TRANSLATION_FACTOR = config.getfloat("POINTCLOUD", "STD_TRANSLATION")
     ZOOM_FACTOR = config.getfloat("POINTCLOUD", "STD_ZOOM")

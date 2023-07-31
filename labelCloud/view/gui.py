@@ -165,6 +165,8 @@ class GUI(QtWidgets.QMainWindow):
 
         # LEFT PANEL
         # point cloud management
+        # TODO convert to drop down
+        # can look at the right panel for how to do it (QComboBox)
         self.label_current_pcd: QtWidgets.QLabel
         self.button_prev_pcd: QtWidgets.QPushButton
         self.button_next_pcd: QtWidgets.QPushButton
