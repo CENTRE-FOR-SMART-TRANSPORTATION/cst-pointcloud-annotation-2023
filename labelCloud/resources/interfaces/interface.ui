@@ -210,6 +210,12 @@
       </item>
       <item>
        <widget class="QLabel" name="point_cloud_dropdown_label">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
         <property name="statusTip">
          <string>Select a point cloud to display</string>
         </property>
@@ -225,7 +231,14 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="point_cloud_dropdown"/>
+       <widget class="QComboBox" name="point_cloud_dropdown">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QGroupBox" name="bbox_controls">
